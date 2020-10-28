@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our blog | EdgeLedger</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/39c738d856.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <nav class="navbar top" id="navbar">
+        <a href="index.html"><img src="images/logo.svg" id="logo" alt="logo EdgeLedger"></a>
+        <ul>
+            <li><a href="index.html#header-showcase">Home</a></li>
+            <li><a href="index.html#services">About</a></li>
+            <li><a href="index.html#cases">Cases</a></li>
+            <li><a href="index.html#big-card-2">Blog</a></li>
+            <li><a href="index.html#contact-form">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="header-blog">
+            <section id="blog">
+                <h1>Blog</h1>
+            </section>
+    </header>
+
+    <main>
+        <section class="blog-1 blog-post">
+            <img src="./images/blog/blog1.jpg" alt="">
+            <div class="info">
+                <h2>Blog post one</h2>
+                <div class="user">
+                    <i class="fas fa-user"></i>
+                    <p>Posted by Steve Smith | October 25. 2020</p>
+                </div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore nisi explicabo voluptate praesentium totam. Distinctio culpa asperiores ducimus.</p>
+                <a href="post.html" class="btn-2-dark" target="_blank">Read more</a>
+            </div>
+        </section>
+
+        <section class="blog-2 blog-post">
+            <img src="./images/blog/blog2.jpg" alt="newspaper">
+            <div class="info">
+                <h2>Blog post two</h2>
+                <div class="user">
+                    <i class="fas fa-user"></i>
+                    <p>Posted by Jane Doe | October 26. 2020</p>
+                </div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore nisi explicabo voluptate praesentium totam. Distinctio culpa asperiores ducimus.</p>
+                <a href="post.html" class="btn-2" target="_blank">Read more</a>
+            </div>
+        </section>
+
+        <section class="blog-3 blog-post">
+            <img src="./images/blog/blog3.jpg" alt="computer">
+            <div class="info">
+                <h2>Blog post three</h2>
+                <div class="user">
+                    <i class="fas fa-user"></i>
+                    <p>Posted by John Doe | October 29. 2020</p>
+                </div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore nisi explicabo voluptate praesentium totam. Distinctio culpa asperiores ducimus.</p>
+                <a href="post.html" class="btn-2-dark" target="_blank">Read more</a>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+            <div id="icons-footer">
+                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>Copyright &copy; 2020 - EdgeLedger</p>
+    </footer>
+
+    <script>
+        const navbar = document.getElementById('navbar');
+        let scrolled = false;
+
+        window.onscroll = function () {
+            if(window.pageYOffset > 100) {
+                navbar.classList.remove ('top');
+                if(!scrolled) {
+                    navbar.style.transform = 'translateY(-10vh)';
+                }
+                setTimeout (function() {
+                    navbar.style.transform = 'translateY(0)';
+                    scrolled= true;
+                }, 200)
+            } else {
+                navbar.classList.add('top');
+                scrolled= false;
+            }
+        }
+    </script>
+
+</body>
+</html>
